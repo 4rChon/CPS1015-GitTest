@@ -3,58 +3,93 @@
   <head>
     <meta charset="utf-8" />
     <title>Button Presser 3000</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="index.html">Home</a></li>
           <li><a href="leaderboards.html">Leaderboards</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>Welcome to Button Presser 3000!</h1>
-      <div>
-        <p>Press the button to earn points!</p>
-        <button>Press Me!</button>
-        <p>Button Presses: <span>0</span></p>
-      </div>
+    <main id="home">
+      <h1>Button Presser 3000</h1>
+      <section id="button-presser">
+        <button id="the-button" onclick="press_button()">Press Me!</button>
+        <p>Button Presses (BP): <span id="bps">0</span></p>
+      </section>
       <div>
         <h2>Shop</h2>
-        <h3>Button Mashers</h3>
-        <ul>
-          <li>
-            Button Masher 1
-            <p>Count: <span>0</span></p>
-            <p>Cost: <span>10</span> Button Presses</p>
-            <button>Buy</button>
-          </li>
-          <li>
-            Button Masher 2
-            <p>Count: <span>0</span></p>
-            <p>Cost: <span>100</span> Button Presses</p>
-            <button>Buy</button>
-          </li>
-        </ul>
-        <h3>Upgrades</h3>
-        <ul>
-          <li>
-            Upgrade Button Masher 1
-            <p>Level: <span>0</span></p>
-            <p>Cost: <span>100</span> Button Presses</p>
-            <button>Buy</button>
-          </li>
-          <li>
-            Upgrade Button Masher 2
-            <p>Level: <span>0</span></p>
-            <p>Cost: <span>1000</span></p>
-            <button>Buy</button>
-          </li>
+        <section>
+          <h3>Button Mashers</h3>
+          <ul class="shop-items">
+            <li class="shop-item">
+              <h4>Button Masher 1</h4>
+              <div class="shop-item-content">
+                <div class="shop-item-details">
+                  <p>Buy Cost: <span>10</span> BP</p>
+                  <p>Upgrade Cost: <span>1000</span> BP</p>
+                  <div class="shop-item-actions">
+                    <button>Buy</button>
+                    <button>Upgrade</button>
+                  </div>
+                </div>
+                <div class="shop-item-stats">
+                  <p>Count: <span>0</span></p>
+                  <p>Level: <span>0</span></p>
+                  <p>BP Per Second: <span>1</span></p>
+                </div>
+              </div>
+            </li>
+            <li class="shop-item">
+              <h4>Button Masher 2</h4>
+              <div class="shop-item-content">
+                <div class="shop-item-details">
+                  <p>Buy Cost: <span>100</span> BP</p>
+                  <p>Upgrade Cost: <span>10000</span> BP</p>
+                  <div class="shop-item-actions">
+                    <button>Buy</button>
+                    <button>Upgrade</button>
+                  </div>
+                </div>
+                <div class="shop-item-stats">
+                  <p>Count: <span>0</span></p>
+                  <p>Level: <span>0</span></p>
+                  <p>BP Per Second: <span>10</span></p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Upgrades</h3>
+          <ul class="shop-items">
+            <li class="shop-item">
+              <h4>Upgrade Clicker</h4>
+              <div class="shop-item-content">
+                <div class="shop-item-details">
+                  <p>Cost: <span>100</span> BP</p>
+                  <div class="shop-item-actions">
+                    <button>Buy</button>
+                  </div>
+                </div>
+                <div class="shop-item-stats">
+                  <p>Level: <span>0</span></p>
+                  <p>BP Per Click: <span>1</span></p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
       </div>
     </main>
     <footer>
-      <p><small>Button Presser 3000 - Made By Benjamin Bugeja for CPS1015</small></p>
+      <p>
+        <small>Button Presser 3000 - Made By Benjamin Bugeja for CPS1015</small>
+      </p>
     </footer>
   </body>
 </html>
